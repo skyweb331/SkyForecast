@@ -1,0 +1,173 @@
+body {
+    background-image: url("https://static.pexels.com/photos/9574/pexels-photo.jpeg");
+    background-size: 100vw 100vh;
+}
+
+h2{
+  color:  #008cba;
+}
+
+.map {
+  margin-top: 2vh;
+  border-radius: 15px;
+}
+
+.whiteContainer{
+  width: 100%;
+  background-color:white;
+  padding: 2vw;
+  padding-top: 1vw;
+  overflow:overlay;
+  margin-bottom: 2vw;
+  border-radius: 15px;
+  margin: auto;
+  margin-bottom: 2vh;
+  width: 90%;
+}
+
+.signup{
+  width: 60%;
+}
+
+.navbar-brand:hover{
+  color:#FFF;
+}
+
+#navItem:hover .selected{
+  color:black;
+  background-color:#FFF; 
+}
+.summaryText{
+  color: #008cba;
+  font-size: 1 em;
+}
+
+.forecastBlocks{
+  font-size: .7 em;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+
+.hoverme:hover{
+  background-color:#E2E2E2;
+}
+
+.center {
+    margin: auto;
+    width: 90%;
+    overflow:overlay;
+    border-radius: 15px;
+}
+
+.whiteBorder {
+    margin: auto;
+    width: 80%;
+    border: 3px solid white;
+    padding: 10px;
+    overflow:overlay;
+    border-radius: 15px;
+}
+
+.navbar-brand{
+  font-size: 2em;
+  font-family: 'Pacifico', cursive;
+  color:  #333;
+  border-radius: 15px;
+  color:  #008cba;
+}
+
+nav {
+  padding-left: 2vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  font-size: 1.5em;
+}
+
+#navItem{
+  margin-top: 2vh;
+  margin-left: 1vw;
+  color:  white;
+  border-radius: 16px;
+
+}
+
+.navContainer{
+  border-radius: 10px;
+  margin: 1vw;
+}
+
+.list-inline {
+  white-space:nowrap;
+}
+
+.searchContainer {
+  padding-left:3vw;
+  padding-right:3vw;
+
+}
+
+/* AUTOCOMPLETE Styles*/
+.autoCompleteContainer{
+    text-align: center;
+}
+.autocomplete{
+  width: 60%;
+  display: inline-block;
+}
+
+.autocomplete input{
+  font-size: 1.2em;
+  width: 100%;
+  padding:0.4em;
+}
+
+.autocomplete{
+  border-left: 1px solid #888;
+  border-right: 1px solid #888;
+  border-bottom: 1px solid #888;
+}
+
+.autocomplete li{
+  text-align: left;
+  list-style:none;
+  width: 100%;
+  padding:0.4em;
+  background-color: #fff;
+}
+
+.autocomplete li.active{
+  width: 100%;
+  background-color: #4bf;
+}
+
+.autocomplete .highlight {
+  background-color: #E2E2E2;
+}
+
+.autocomplete li.active .highlight {
+  background: #666;
+  color: #fff;
+}
+/* Chat CSS */
+.chart {
+    background: #eee;
+    padding: 3px;
+}
+
+.chart div {
+  width: 0;
+  transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -webkit-transition: all 1s ease-out;
+}
+
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 5px;
+  color: white;
+  box-shadow: 2px 2px 2px #666;
+}
+

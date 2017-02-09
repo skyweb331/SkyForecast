@@ -1,0 +1,21 @@
+<div class="whiteContainer signup">
+  <h1>Register</h1>
+  <div ng-show="error" class="alert alert-danger">{{errorMessage}}</div>
+  <form class="form" ng-submit="register()">
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" class="form-control" name="username" ng-model="registerForm.username" required>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+        <input type="password" class="form-control" name="password" ng-model="registerForm.password" required>
+      </div>
+      <div  class="text-center">
+        <button type="submit" class="btn btn-success">Register</button>
+      </div>
+  </form>
+  <hr></hr>
+  <div class = 'text-center'>
+    <button class="btn btn-primary" ng-click='switchForms()'>Already have an account?</button>
+  </div>
+</div>

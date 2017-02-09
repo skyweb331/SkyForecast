@@ -1,0 +1,56 @@
+ <div class='container-fluid'> 
+    
+    <!-- search -->
+    <div class='whiteContainer autoCompleteContainer'>
+      <h2>Search a place to see the weather:</h2>
+        <div class='autocomplete'>
+          <input type="text" my-enter="getWeatherData()" class="search" ng-model="placeEntry" ng-change="searchPlace(placeEntry)" placeholder="Search for a place">
+              <div class='search' ng-repeat="place in placePredictions" ng-click="getWeatherData(place)">
+                  <li class="hoverme suggestionBox">
+                    {{place.name}}
+                  </li>
+              </div>
+          </div>
+          <div class="loading-spiner-holder" data-loading ><div class="loading-spiner"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" /></div></div>
+      </div>
+
+      <!-- weatherCurrently -->
+      <div ng-show='weatherCurrently'class='whiteContainer text-center'>
+        <h2>Current conditions for: <a class="label label-primary"> {{placeEntry}}</a></h2>
+        <div class='col-md-6'>
+          <ul><skycon icon="weatherCurrently.icon" size="200"></skycon></ul>
+          <ul><div class='summaryText'>{{weatherCurrently.summary}}</div> </ul>
+          <ul> <div class='label label-default'>Probability of Precipitation:</div>{{weatherCurrently.precipProbability}} %</ul>
+          <ul> <div class='label label-default'>Temperature:</div> {{weatherCurrently.temperature}} °F</ul>
+          <ul> <div class='label label-default'>Feels Like:</div> {{weatherCurrently.apparentTemperature}} °F</ul>
+        </div>
+        <div class='col-md-6 map'>
+          <img ng-show='mapUrl' ng-src="{{mapUrl}}" />
+        </div>
+      </div>
+
+    <!-- weatherForecast -->
+      <div ng-show='weatherForecast' class="whiteContainer">
+       <h2>This Week's Forecast</h2>
+         <div class="list-inline" ng-repeat="weather in weatherForecast">
+           <weather-block weather="weather" class='col-md-3 forecastBlocks'></weather-block>
+         </div>
+      </div>
+
+      <!-- weatherHistory -->
+      <div ng-show='weatherHistory' class='whiteContainer'>
+        <label class="checkbox-inline"><h2>Weather on This Date, Last Year</h2></label>
+        <div  id="line-chart" >
+           <div class="panel panel-default">
+             <div class="panel-heading">
+               <div class= 'text-center'><h3>Temperature In 2015</h3></div>
+             </div>
+             <div class="panel-body">
+               <canvas id="line" class="chart chart-line" data="chartData" labels="labels" legend="true" series="series"></canvas>
+             </div>
+           </div>
+         </div>
+      </div>
+    </div>
+
+</div>
