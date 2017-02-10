@@ -68,37 +68,7 @@ describe('Forecast Backend', function(){
                     }
                 });
             });
-        // it('should able to logout', function(done){
-        //     api.get('/user/logout')
-        //         .expect(200)
-        //         .end(function(err,res){
-        //             if(err){
-        //                 done(err);
-        //             } else {
-        //                 expect(res.body.status).to.equal('Bye!');
-        //                 done();
-        //             }
-        //         });
-        //     });
         });
-    
-    
-    describe('Checking User Actions',function(){
-        it('should be able to get user past searches', function(done){
-            api.get('/user/pastSearches')
-                .set("Cookie",loggedInUser)
-                .expect('Content-type','application/json; charset=utf-8')
-                .expect(200)
-                .end(function(err,res){
-                    if(err){
-                        done(err);
-                    } else {
-                        expect(res.username).to.not.equal(null);
-                        done();
-                    }                
-                });
-            });
-    });
     describe('Checking Weather Functionality',function(){
         it('should be able to show suggestion list from {washi}', function(done){
             api.post('/placeData')
