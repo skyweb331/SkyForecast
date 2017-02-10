@@ -28,6 +28,8 @@ module.exports = {
   },
 
   weatherCurrently: function(req, res) {
+    // record this search in the user's search history
+    UserController.addSearch(req.user._id, req.body.place);
     // grab the lat and lng and make the call to the weather api
     getLatAndLng(req.body.place)
     .then(function(result){
