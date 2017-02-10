@@ -1,7 +1,8 @@
 {
   "name": "skyforecast",
   "scripts": {
-    "start": "node server/server.js"
+    "start": "node server/server.js",
+    "test" : "mocha test/server.js --timeout 15000"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
@@ -21,6 +22,8 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "chai-http": "^3.0.0"
+    "chai-http": "^3.0.0",
+    "http": "0.0.0",
+    "supertest": "^3.0.0"
   }
 }
