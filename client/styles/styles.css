@@ -3,6 +3,10 @@ body {
     background-size: 100vw 100vh;
 }
 
+#weathericon{
+  width:48px;
+  height:48px;
+}
 h2{
   color:  #008cba;
 }
