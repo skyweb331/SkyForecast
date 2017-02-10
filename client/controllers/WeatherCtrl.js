@@ -50,6 +50,7 @@ angular.module('WeatherCtrl',[])
         $scope.mapUrl = SearchService.constructMapUrl( resp.data.latitude, resp.data.longitude, resp.data.key );
         $scope.weatherCurrently = resp.data.currently;
         // add the day of the week onto each forecast object
+        console.log(resp.data.daily.data);
         $scope.weatherForecast = SearchService.addDaysOfWeek( resp.data.daily.data );
       });
     }

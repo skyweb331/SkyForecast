@@ -15,7 +15,7 @@
       </div>
 
       <!-- weatherCurrently -->
-      <div ng-show='weatherCurrently'class='whiteContainer text-center'>
+      <div ng-show='weatherCurrently' class='whiteContainer text-center row'>
         <h2>Current conditions for: <a class="label label-primary"> {{placeEntry}}</a></h2>
         <div class='col-md-6'>
           <ul><skycon icon="weatherCurrently.icon" size="200"></skycon></ul>
@@ -30,10 +30,10 @@
       </div>
 
     <!-- weatherForecast -->
-      <div ng-show='weatherForecast' class="whiteContainer">
+      <div ng-show='weatherForecast' class="whiteContainer row">
        <h2>This Week's Forecast</h2>
-         <div class="list-inline" ng-repeat="weather in weatherForecast">
-           <weather-block weather="weather" class='col-md-3 forecastBlocks'></weather-block>
+         <div class="list-inline" >
+           <weather-block weather="weather" class='col-md-6 col-lg-3 forecastBlocks' ng-repeat="weather in weatherForecast"></weather-block>
          </div>
       </div>
 

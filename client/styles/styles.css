@@ -37,13 +37,11 @@ h2{
   color:#FFF;
 }
 
-#navItem:hover .selected{
-  color:black;
-  background-color:#FFF; 
-}
 .summaryText{
   color: #008cba;
   font-size: 1 em;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .forecastBlocks{
@@ -75,7 +73,6 @@ h2{
 .navbar-brand{
   font-size: 2em;
   font-family: 'Pacifico', cursive;
-  color:  #333;
   border-radius: 15px;
   color:  #008cba;
 }
@@ -91,10 +88,15 @@ nav {
   margin-top: 2vh;
   margin-left: 1vw;
   color:  white;
-  border-radius: 16px;
-
+  background-color: transparent;
 }
-
+#navItem:hover{
+  color: #008cba;
+}
+#navItem:hover .selected{
+  color:black;
+  background-color:#FFF; 
+}
 .navContainer{
   border-radius: 10px;
   margin: 1vw;
@@ -175,3 +177,14 @@ nav {
   box-shadow: 2px 2px 2px #666;
 }
 
+.day-info{
+  display: table;
+}
+.day-info .weather-icon, .day-info .date-info{
+  display: table-cell;
+  vertical-align: middle;
+}
+.day-info .date-info{
+  width: 100%;
+  padding-left: 10px;
+}
