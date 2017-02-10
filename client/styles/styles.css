@@ -189,3 +189,9 @@ nav {
   width: 100%;
   padding-left: 10px;
 }
+
+.whiteContainer .label{
+  display: inline-block;
+  font-size: 1em;
+  margin: 10px;
+}

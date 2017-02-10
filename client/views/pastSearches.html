@@ -1,8 +1,6 @@
 <div class='whiteContainer searchContainer'> 
     <h2 ng-show='username'>{{username}}'s weather searches</h2>
-    <div ng-repeat="search in pastSearches" class='col' ng-click='routeToSearch(search)'>
-      <h3><a class="label label-primary"> {{search.name}}</a></h3>
-    </div>
+    <a class="label label-primary" ng-repeat="search in pastSearches" ng-click='routeToSearch(search)'> {{search.name}}</a>
     <div ng-show="noSearches" class='text-center'>
       <h3>You haven't searched anything yet!</h3>
     </div>
