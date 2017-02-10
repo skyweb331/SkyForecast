@@ -39,12 +39,9 @@
 
       <!-- weatherHistory -->
       <div ng-show='weatherHistory' class='whiteContainer'>
-        <label class="checkbox-inline"><h2>Weather on This Date, Last Year</h2></label>
+        <label class="checkbox-inline"><h2>Past Week</h2></label>
         <div  id="line-chart" >
            <div class="panel panel-default">
-             <div class="panel-heading">
-               <div class= 'text-center'><h3>Temperature In 2015</h3></div>
-             </div>
              <div class="panel-body">
                <canvas id="line" class="chart chart-line" data="chartData" labels="labels" legend="true" series="series"></canvas>
              </div>

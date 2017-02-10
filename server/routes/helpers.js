@@ -92,23 +92,16 @@ function getLatAndLng ( place ){
 // but a  year in the past
 function generateDateArr(){
   var dates = [];
-  var aYearAgo = addYears(-1);
-  for(var i = 0; i < 30; i ++ ){
-    var newDate = addDays( i, aYearAgo );
+  for(var i = 7; i > 0; i -- ){
+    var newDate = daysFromNow( i );
     // put it in iso format, as that is what the forecast api takes
     dates.push( newDate.toISOString().split('.')[0] );
   }
   return dates;
 }
 
-function addDays(days, origDate){
-  var dat = new Date(origDate.valueOf());
-  dat.setDate(dat.getDate() + days);
-  return dat;
-}
-
-function addYears (years){
+function daysFromNow(days){
   var dat = new Date();
-  dat.setFullYear(dat.getUTCFullYear()+years);
+  dat.setDate(dat.getDate() - days);
   return dat;
 }
