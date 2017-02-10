@@ -19,8 +19,7 @@
     <nav class="navbar navbar-light bg-faded ">
       <div class="container-fluid">
         <div class="navbar-header">
-          <canvas id="weathericon" width="64" height="64"></canvas>
-          <a class="navbar-brand" href="#/">SkyCast</a>
+          <a class="navbar-brand" href="#/"><img src="images/logo.png" width="100px"/></a>
         </div>
         <ul class="nav navbar-nav" ng-controller="logoutController" ng-show ='isLoggedIn()'>
           <li ng-controller="logoutController" ng-show ='isLoggedIn()'>
@@ -60,9 +59,9 @@
   <script src="./controllers/WeatherCtrl.js"></script>
   <script src="./directives/LoadingDir.js"></script>
   <script src="./directives/WeatherBlockDir.js"></script>
-  <script src="./lib/WeatherIcon.mini.js"></script>
+  <!--<script src="./lib/WeatherIcon.mini.js"></script>
   <script type="text/javascript">
     var weathericon = WeatherIcon.add('weathericon', WeatherIcon.LIGHTRAINSUN, { mode:WeatherIcon.NIGHT, stroke:true, shadow:true, animated:true } );
-  </script>
+  </script>-->
 </body>
 </html>
