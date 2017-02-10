@@ -4,6 +4,7 @@ angular.module('myApp',[
   'LogoutCtrl',
   'RegisterCtrl',
   'WeatherCtrl',
+  'PastSearchesCtrl',
   'SearchService',
   'AuthService',
   'LoadingDir',
@@ -30,6 +31,11 @@ angular.module('myApp',[
     })
     .when('/logout', {
       controller: 'logoutController',
+      access: {restricted: true}
+    })
+    .when('/pastSearches', {
+      templateUrl: 'views/pastSearches.html',
+      controller: 'pastSearchesController',
       access: {restricted: true}
     })
     .otherwise({
