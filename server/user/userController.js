@@ -78,6 +78,9 @@ module.exports = {
   },
 
   addSearch: function ( id, place ){
+    if(place === "") {
+      return;
+    }
     User.findOne({_id: id })
     .then(function(user) {
       // Using concat so that search history appears with most recent first
