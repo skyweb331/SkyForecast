@@ -51,21 +51,7 @@ module.exports = {
       status: 'Bye!'
     });
   },
-
-  pastSearches: function(req, res) {
-    User.findOne({_id: req.user._id })
-    .then(function (user) {
-      if (user) {
-        res.json({
-          username: user.username,
-          pastSearches: user.pastSearches
-        });
-      } else {
-        console.error('Error finding users');
-      }
-    });
-  },
-  
+ 
   status: function(req, res) {
     if (!req.isAuthenticated()) {
       return res.status(200).json({
@@ -75,20 +61,5 @@ module.exports = {
     res.status(200).json({
       status: true
     });
-  },
-
-  addSearch: function ( id, place ){
-    User.findOne({_id: id })
-    .then(function(user) {
-      // Using concat so that search history appears with most recent first
-      var newPlace = [place]
-      user.pastSearches = newPlace.concat( user.pastSearches );
-      user.save(function(err) {
-        if (err) {
-          console.error(err);
-        } 
-      });
-    });
   }
-
 }

@@ -10,8 +10,6 @@ router.post('/user/login', UserController.login);
 
 router.get('/user/logout', UserController.logout);
 
-router.get('/user/pastSearches', UserController.pastSearches);
-
 router.get('/user/status', UserController.status);
 
 router.post('/placeData', helpers.placeData);

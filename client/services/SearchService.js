@@ -8,7 +8,6 @@ function SearchServiceFunc ($http) {
     getWeatherCurrently: getWeatherCurrently,
     getWeatherHistory: getWeatherHistory,
     getPlaceData: getPlaceData,
-    getPastSearches: getPastSearches,
     getSearch: getSearch,
     setSearch: setSearch,
     addDaysOfWeek: addDaysOfWeek,
@@ -55,13 +54,6 @@ function SearchServiceFunc ($http) {
      weatherForecastArr[i].day = daysOfWeek[ ( i+day+1 ) % 7 ];
     }
     return weatherForecastArr;
-  }
-
-  function getPastSearches() {
-    return $http.get('/user/pastSearches')
-    .error(function (data) {
-     console.error(data);
-    });
   }
 
   function constructMapUrl( lat,lng, key ){
