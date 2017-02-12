@@ -10,11 +10,25 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['mocha'],
+    frameworks: ['mocha','chai'],
 
 
     // list of files / patterns to load in the browser
     files: [
+        'client/bower_components/jquery/dist/jquery.js',
+        'client/bower_components/bootstrap/dist/js/bootstrap.min.js',
+        'client/bower_components/angular/angular.js',        
+        'client/bower_components/angular-mocks/angular-mocks.js',
+        'client/lib/*.js',
+        'client/bower_components/angular-route/angular-route.js',
+        'client/bower_components/Chart.js/Chart.js',        
+        'client/bower_components/angular-chart.js/angular-chart.js',
+        'client/main.js',
+        'client/services/*.js',
+        'client/controllers/*.js',
+        'client/directives/*.js',        
+        'client/views/.*.html',        
+        'test/*.mocha.js'
     ],
 
 
@@ -26,6 +40,12 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
+        // 'clients/controllers/*.js' : ['coverage'],
+        // 'clients/directives/*.js': ['coverage'],
+        // 'clients/lib/*.js': ['coverage'],
+        // 'clients/services/*.js': ['coverage'],
+        // 'clients/views/.*.html': ['coverage'],
+        // 'clients/main.js': ['coverage']
     },
 
 
