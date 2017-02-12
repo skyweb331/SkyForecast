@@ -22,9 +22,10 @@ http://localhost:3000
 ----------
 <i class="icon-pencil"></i> Testing
 -------------
-Run Below Code to test angular unit test
+Run Below command to test angular and backend
 ```
 npm install -g karma-cli
+npm install -g mocha
 ```
 You can run angular test by following command
 ```

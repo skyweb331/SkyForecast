@@ -2,7 +2,7 @@
   "name": "skyforecast",
   "scripts": {
     "start": "node server/server.js",
-    "test": "node_modules/mocha/bin/mocha test/server.js --timeout 15000"
+    "test": "mocha test/server.js --timeout 15000"
   },
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
