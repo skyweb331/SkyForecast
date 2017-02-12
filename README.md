@@ -4,6 +4,10 @@ First install node modules.
 ```
 npm install
 ```
+To install bower components, run below command
+```
+bower install
+```
 After successful installation, just make it run
 ```
 npm start
