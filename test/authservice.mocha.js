@@ -22,7 +22,7 @@ describe('Angular Test : ', function(){
 	
 	
 
-	describe ('AuthService : Login Test - ', function(){
+	// describe ('AuthService : Login Test - ', function(){
 		// beforeEach(function(){
 		// 	$httpBackend
         //     	.expectPOST('/user/login',{usrname:'test',password:'test'})
@@ -37,21 +37,21 @@ describe('Angular Test : ', function(){
 		// 		//console.log('adasdas');
 		// 		expect(authService.isLoggedIn()).to.be.false;
 		// 	});
-		beforeEach(inject(function($injector){
-			$httpBackend = $injector.get('$httpBackend');
-			$httpBackend.when('POST','/user/login')
-				.respond(200,{status: true});
-		}));
+	// 	beforeEach(inject(function($injector){
+	// 		$httpBackend = $injector.get('$httpBackend');
+	// 		$httpBackend.when('POST','/user/login')
+	// 			.respond(200,{status: true});
+	// 	}));
 
-		afterEach(function(){
-			$httpBackend.verifyNoOutstandingExpectation();
-			$httpBackend.verifyNoOutstandingRequest();
-		});
+	// 	afterEach(function(){
+	// 		$httpBackend.verifyNoOutstandingExpectation();
+	// 		$httpBackend.verifyNoOutstandingRequest();
+	// 	});
 		
-		it('should success in login with test account', function(){
-			var result = authService.login('test','test');
-			$httpBackend.expectPOST('/user/login');
-			$httpBackend.flush();
-		});
-	});
+	// 	it('should success in login with test account', function(){
+	// 		var result = authService.login('test','test');
+	// 		$httpBackend.expectPOST('/user/login');
+	// 		$httpBackend.flush();
+	// 	});
+	// });
 });
