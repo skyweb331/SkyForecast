@@ -6,6 +6,9 @@ npm install
 ```
 To install bower components, run below command
 ```
+npm install bower -g
+```
+```
 bower install
 ```
 After successful installation, just make it run
