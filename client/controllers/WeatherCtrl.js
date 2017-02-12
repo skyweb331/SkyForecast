@@ -69,7 +69,7 @@ angular.module('WeatherCtrl',[])
       var datesArr = data.map(function( date ) {return SearchService.convertTimeStamp(date.time);});
       $scope.chartData = [ lowTempArr, highTempArr ];
       $scope.labels = datesArr;
-      $scope.series = ['High Temp', 'Low Temp'];
+      $scope.series = ['Low Temp', 'High Temp'];
     }
 
 }]);
