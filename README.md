@@ -1,21 +1,3 @@
-Welcome to skyforecast!
-===================
-skyforecast combines data from google maps, google places, and Forecast.io api to allow users to see the weather anywhere
-
-----------
-<i class="icon-cog"></i>Installation
--------------
-
-#### 1. Clone project
-```bash
-$ git clone https://github.com/skyweb331/skyforecast.git
-```
-#### 2. Config
-
-> - Create **server/config.js** file identical to **server/example.config.js**
-> - Set proper variables in **config.js**
-
-----------
 <i class="icon-pencil"></i> Running
 -------------
 First install node modules.
