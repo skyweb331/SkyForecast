@@ -19,6 +19,10 @@ Run Below Code to test angular unit test
 ```
 npm install -g karma-cli
 ```
+You can run angular test by following command
+```
+karma start
+```
 You have to run server by above instruction. After run node server, you can run unit test by 
 ```
 npm test
