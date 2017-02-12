@@ -92,7 +92,7 @@ function getLatAndLng ( place ){
 // but a  year in the past
 function generateDateArr(){
   var dates = [];
-  for(var i = 7; i > 0; i -- ){
+  for(var i = 30; i > 0; i -- ){
     var newDate = daysFromNow( i );
     // put it in iso format, as that is what the forecast api takes
     dates.push( newDate.toISOString().split('.')[0] );
