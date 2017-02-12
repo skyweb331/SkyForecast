@@ -2,9 +2,9 @@
     
     <!-- search -->
     <div class='whiteContainer autoCompleteContainer'>
-      <h2>Search a place to see the weather:</h2>
+      <h2>Enter Location for weather lookup:</h2>
         <div class='autocomplete'>
-          <input type="text" my-enter="getWeatherData()" class="search" ng-model="placeEntry" ng-change="searchPlace(placeEntry)" placeholder="Search for a place">
+          <input type="text" my-enter="getWeatherData()" class="search" ng-model="placeEntry" ng-change="searchPlace(placeEntry)" placeholder="Enter location">
               <div class='search' ng-repeat="place in placePredictions" ng-click="getWeatherData(place)">
                   <li class="hoverme suggestionBox">
                     {{place.name}}
